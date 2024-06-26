@@ -1,16 +1,15 @@
-docs_dir: docs/
-repo_name: 'CyVerse-learning-materials/foss'
-repo_url: 'https://github.com/CyVerse-learning-materials/foss'
+# Header 
+site_name: KEYS Research Internship
+site_description: KEYS Research Internship
+site_author: Devan Patel
+site_url: https://devan-p.github.io/KEYS2024/ 
 
-site_name: 'CyVerse Foundational Open Science Skills 2024'
-site_description: 'Workshop teaching researchers core skills for conducting open science.'
-site_author: 'CyVerse Science Team'
-site_url: 'https://foss.cyverse.org'
-
-edit_uri: edit/mkdocs/docs
-
+# Footer
+repo_name: KEYS2024
+repo_url: https://github.com/devan-p/KEYS2024
+edit_uri: edit/main/docs/
 # Copyright
-copyright: 'Copyright &copy; 2024 CyVerse'
+copyright: 'Copyright &copy; 2024 Arizona Board of Regents'
 
 # Navigation Page
 
