@@ -49,6 +49,8 @@ theme:
     - toc.follow
   # Default values, taken from mkdocs_theme.yml
   language: en
+  custom_dir: 'docs/overrides'
+
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
