@@ -36,6 +36,9 @@ nav:
   - Capstone Project:
       - 'Overview': final_project/overview.md
 
+  - Chatbot QA:
+      - Chatbot: iframechatbot.md
+
 # must also set Action to use `@nomaterial` branch instead of `@master` for material
 theme:
   name: material
