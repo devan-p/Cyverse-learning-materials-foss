@@ -65,7 +65,7 @@
 <div class="chat-icon" id="chatIcon">💬</div>
 <div class="chat-popup" id="chatPopup">
     <button class="close-btn" id="closeBtn">x</button>
-    <iframe src="https://chat-qa.cyverse.org/" class="custom-iframe"></iframe>
+    <iframe src="https://chat-qa.cyverse.org/" class="custom-iframe" id="chatIframe"></iframe>
 </div>
 
 <script>
@@ -103,6 +103,21 @@
 
         // Initialize chat popup state on page load
         toggleChatPopup();
+
+        // Function to update links in iframe
+        function updateIframeLinks() {
+            const iframe = document.getElementById("chatIframe");
+            iframe.onload = function() {
+                const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                const links = iframeDocument.getElementsByTagName('a');
+                for (let i = 0; i < links.length; i++) {
+                    links[i].setAttribute('target', '_blank');
+                }
+            };
+        }
+
+        // Update links in iframe
+        updateIframeLinks();
     }
 
     document.addEventListener("DOMContentLoaded", setUpEventListeners);
