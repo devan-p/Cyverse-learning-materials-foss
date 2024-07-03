@@ -108,10 +108,14 @@
         function updateIframeLinks() {
             const iframe = document.getElementById("chatIframe");
             iframe.onload = function() {
-                const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-                const links = iframeDocument.getElementsByTagName('a');
-                for (let i = 0; i < links.length; i++) {
-                    links[i].setAttribute('target', '_blank');
+                try {
+                    const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                    const links = iframeDocument.getElementsByTagName('a');
+                    for (let i = 0; i < links.length; i++) {
+                        links[i].setAttribute('target', '_blank');
+                    }
+                } catch (error) {
+                    console.error('Could not access iframe content:', error);
                 }
             };
         }
